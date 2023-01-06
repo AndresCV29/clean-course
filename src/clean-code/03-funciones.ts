@@ -17,17 +17,17 @@
     
     // Crear una película
     interface Movie {
-        title: string;
+        cast: string[];
         description: string;
         rating: number;
-        cast: string[];
+        title: string;
     }
-    function createMovie() {
+    function createMovie({title, description, rating, cast}: Movie) {
         console.log({ title, description, rating, cast });
     }
 
     // Crea un nuevo actor
-    function createNewActor( fullName: string, birthDate: Date ): boolean {
+    function createNewActor( fullName: string, birthdate: Date ): boolean {
         
         // tarea asincrona para verificar nombre
         // ..
