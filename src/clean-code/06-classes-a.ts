@@ -1,4 +1,6 @@
 (() =>{
+    //No aplicando el principio de responsabilidad unica
+
     type Gender = 'M' | 'F';
     class Person {
 
@@ -11,7 +13,9 @@
     }
 
     class User extends Person {
+
         public lastAccess: Date
+        
         constructor(
             public email: string,
             public role: string,
@@ -31,7 +35,7 @@
     class UserSettings extends User {
         constructor(
             public workingDirectory: string,
-            public lasOpenFolder: string,
+            public lastOpenFolder: string,
             email: string,
             role: string,
             name: string,
